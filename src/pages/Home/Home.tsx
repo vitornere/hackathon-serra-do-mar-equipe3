@@ -1,4 +1,4 @@
-import { IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonItem, IonLabel, IonList, IonMenuButton, IonPage, IonRow, IonSearchbar, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonImg, IonItem, IonLabel, IonList, IonMenuButton, IonPage, IonRow, IonSearchbar, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import React, { useState } from 'react';
 import './Home.css';
 import places from '../../constants/places';
@@ -28,6 +28,10 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
 
+        <IonText id="title" color='success'>
+          <h1>Conduzindo você a novas experiências!</h1>
+        </IonText>
+
         <IonSearchbar onIonChange={e => {
           console.log(e.detail.value)
           if (e.detail.value) {
@@ -45,7 +49,7 @@ const Home: React.FC = () => {
                 <IonImg src={place.img} />
                 <IonCardHeader>
                   <IonCardSubtitle>Destino</IonCardSubtitle>
-                  <IonCardTitle>{place.title}</IonCardTitle>
+                  <IonCardTitle>{place.title.toUpperCase()}</IonCardTitle>
                 </IonCardHeader>
                 <IonCardContent>
                   {place.description}
