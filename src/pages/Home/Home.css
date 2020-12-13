@@ -8,3 +8,15 @@
     align-items: center;
     text-align: center;
 }
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+}
+
+#logo {
+    width: 50px;
+  }

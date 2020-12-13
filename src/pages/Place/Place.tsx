@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import places, { Place } from '../../constants/places';
 import { useParams } from 'react-router';
 import { add } from 'ionicons/icons';
+import logoImg from '../../assets/logo.jpeg';
+import './Place.css'
 
 
 const PlacePage: React.FC = () => {
@@ -16,14 +18,26 @@ const PlacePage: React.FC = () => {
           <IonButtons slot="start">
             <IonBackButton />
           </IonButtons>
-          <IonTitle>LogoAli</IonTitle>
+          <IonTitle><IonRow>
+                <IonCol size="1">
+                <IonImg id="logo" src={logoImg} />
+                </IonCol>
+                <IonCol class="title">LogoAli</IonCol>
+              </IonRow></IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">LogoAli</IonTitle>
+            <IonTitle size="large">
+              <IonRow>
+                <IonCol>
+                <IonImg id="logo" src={logoImg} />
+                </IonCol>
+                <IonCol class="title">LogoAli</IonCol>
+              </IonRow>
+            </IonTitle>
           </IonToolbar>
         </IonHeader>
 

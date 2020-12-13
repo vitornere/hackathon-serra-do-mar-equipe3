@@ -1,6 +1,7 @@
 import {
   IonContent,
   IonIcon,
+  IonImg,
   IonItem,
   IonLabel,
   IonList,
@@ -14,6 +15,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { homeOutline, homeSharp } from 'ionicons/icons';
 import './Menu.css';
+import logoImg from '../../assets/logo.jpeg'
 
 interface AppPage {
   url: string;
@@ -39,7 +41,9 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>LogoAli</IonListHeader>
+          <IonListHeader>
+            <IonImg id="logo" src={logoImg} /> LogoAli
+          </IonListHeader>
           <IonNote>contato@logoali.com.br</IonNote>
           {appPages.map((appPage, index) => {
             return (

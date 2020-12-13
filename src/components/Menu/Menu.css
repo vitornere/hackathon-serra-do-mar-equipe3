@@ -110,4 +110,8 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
-} 
+}
+
+#logo {
+  width: 50px;
+}

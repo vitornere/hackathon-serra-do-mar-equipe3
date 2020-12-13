@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Home.css';
 import places from '../../constants/places';
 import { useHistory } from 'react-router';
+import logoImg from '../../assets/logo.jpeg';
 
 
 
@@ -17,7 +18,14 @@ const Home: React.FC = () => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>LogoAli</IonTitle>
+          <IonTitle className="title">
+          <IonRow>
+          <IonCol size="1">
+                <IonImg id="logo" src={logoImg} />
+                </IonCol>
+                <IonCol class="title">LogoAli</IonCol>
+              </IonRow>
+          </IonTitle>
         </IonToolbar>
       </IonHeader>
 
