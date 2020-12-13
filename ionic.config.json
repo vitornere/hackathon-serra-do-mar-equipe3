@@ -1,0 +1,7 @@
+{
+  "name": "LogoAli",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
